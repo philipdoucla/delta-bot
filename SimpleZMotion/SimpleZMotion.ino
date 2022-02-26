@@ -15,10 +15,10 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(dirPinX, LOW);
-  digitalWrite(dirPinY, LOW);
-  digitalWrite(dirPinZ, LOW);
-  
+  digitalWrite(dirPinX, HIGH);
+  digitalWrite(dirPinY, HIGH);
+  digitalWrite(dirPinZ, HIGH);
+
   for(int i = 0; i < 200; i++) {
     digitalWrite(stepPinX, HIGH);
     digitalWrite(stepPinY, HIGH);
@@ -29,13 +29,13 @@ void loop() {
     digitalWrite(stepPinZ, LOW);
     delayMicroseconds(500);
   }
-  delay(1000);
+  delay(10000);
 
-  digitalWrite(dirPinX, HIGH);
-  digitalWrite(dirPinY, HIGH);
-  digitalWrite(dirPinZ, HIGH);
+  digitalWrite(dirPinX, LOW);
+  digitalWrite(dirPinY, LOW);
+  digitalWrite(dirPinZ, LOW);
 
-  for(int i = 0; i < 200; i++) {
+  for(int i = 0; i < 100; i++) {
     digitalWrite(stepPinX, HIGH);
     digitalWrite(stepPinY, HIGH);
     digitalWrite(stepPinZ, HIGH);
